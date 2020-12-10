@@ -67,7 +67,7 @@ package protected_types_pkg is
     );
     procedure decrement(
       check_type : t_check_type;
-      number     : integer := -1
+      number     : integer := 1
     );
     impure function get(
       check_type : t_check_type
@@ -182,7 +182,7 @@ package body protected_types_pkg is
 
     procedure decrement(
       check_type : t_check_type;
-      number     : integer := -1
+      number     : integer := 1
     ) is
     begin
       priv_check_counters(check_type) := priv_check_counters(check_type) - number;
